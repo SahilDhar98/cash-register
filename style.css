@@ -1,5 +1,26 @@
+:root{
+
+}
+.body{
+
+    background-color:dimgray;
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
     width: 50vw;
+    text-align: center;
+    margin: auto;
+    background-color: dimgray;
+    color: white;
+
+}
+
+input , label{
+
+    width: 50%;
+    text-align: center;
+    margin: auto;
 }
