@@ -24,3 +24,8 @@ input , label{
     text-align: center;
     margin: auto;
 }
+
+.btn {
+   margin: auto;
+    text-align: center;
+}
