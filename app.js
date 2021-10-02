@@ -11,15 +11,17 @@ notesAvail = [2000,500,100,20,10,5,1];
 btnCheck.addEventListener("click", function validateAmount(){
     hideMessage();
     if(billAmt.value > 0){
-        if(cashGiven.value >= billAmt.value){
+        if(cashGiven.value < billAmt.value)
+        {
+        showMessage("Do you want to WASH dishes?");
+        }
+        else if(cashGiven.value >= billAmt.value)
+        {
             var returnAmt = cashGiven.value - billAmt.value;
             changeCalculator(returnAmt);
 
-        }else{
-            showMessage(
-                "The cash provided must be equal to or more than bill amount"
-            );
         }
+        
     }else{
         showMessage("Invalid Bill Amount");
     }
