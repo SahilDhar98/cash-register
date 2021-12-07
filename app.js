@@ -15,21 +15,29 @@ btnCheck.addEventListener("click", function validateAmount(){
         if(cashGiven.value > billAmt.value)
         {
             var returnAmt = cashGiven.value - billAmt.value;
-            changeCalculator(returnAmt);
-
+            if (returnAmt > 0)
+            {
+                changeCalculator(returnAmt);
+            }        
         }
 
-        else if (cashGiven.value === billAmt.value)
+        if (cashGiven.value === billAmt.value)
         {
             var returnAmt = cashGiven.value - billAmt.value;
-            changeCalculator(returnAmt);
+            if (returnAmt > 0)
+            {
+                changeCalculator(returnAmt);
+            }        
+            
 
         }
 
-        else if(cashGiven.value < billAmt.value)
+        else (billAmt.value > cashGiven.value)
         {
-        showMessage("Do you want to WASH dishes?");
+            showMessage("Do you want to WASH dishes?");
         }
+
+        
         
     }else{
         showMessage("Invalid Bill Amount");
