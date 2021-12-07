@@ -29,3 +29,15 @@ input , label{
    margin: auto;
     text-align: center;
 }
+
+
+table, th, td {
+    border:1px solid white;
+    border-collapse: collapse;
+    border-color: black;
+    
+}
+
+th, td {
+    background-color: gray;
+}

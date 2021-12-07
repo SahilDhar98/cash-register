@@ -12,6 +12,13 @@ btnCheck.addEventListener("click", function validateAmount(){
     hideMessage();
     if(billAmt.value > 0 && cashGiven.value > 0){
         
+
+        if (billAmt.value > cashGiven.value)
+        {
+            showMessage("Do You Wanna go to WASH Dishes?");
+
+        }
+
         if(cashGiven.value > billAmt.value)
         {
             var returnAmt = cashGiven.value - billAmt.value;
@@ -30,12 +37,9 @@ btnCheck.addEventListener("click", function validateAmount(){
             }        
             
 
-        }
-
-        else (billAmt.value > cashGiven.value)
-        {
-            showMessage("Do you want to WASH dishes?");
-        }
+        }  
+        
+        
 
         
         
@@ -47,12 +51,14 @@ btnCheck.addEventListener("click", function validateAmount(){
 
 
 function changeCalculator(returnAmt){
+    
     for(var i=0;i<notesAvail.length; ++i){
         var notes = Math.trunc(returnAmt/notesAvail[i]);
         
         returnAmt %= notesAvail[i];
         noOfNotes[i].innerText = notes;
     } 
+    
 }
 function hideMessage(){
     message.style.display="none";}
